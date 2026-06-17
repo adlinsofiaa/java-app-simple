@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Amora | Packages</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+
+
+</head>
+
+<body>
+
+    <nav>
+        <strong>De Amora</strong>
+        <div>
+            <a href="../index.html">Home</a>
+            <a href="homepagePackage.html">Packages</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Login</button>
+                <div class="dropdown-content">
+                    <a href="customer/customerLogin.html">Customer</a>
+                    <a href="admin/adminLogin.html">Admin</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="page-title">
+        <h1>Our Packages</h1>
+        <p>Choose the perfect photoshoot package for your special moments</p>
+    </section>
+
+    <section class="packages">
+        <div class="package-card">
+            <h3>Bohemian</h3>
+            <p>Natural tones with cozy & warm vibes.</p>
+            <button onclick="openModal('boho')">View Details</button>
+        </div>
+
+        <div class="package-card">
+            <h3>Mid-Century Modern</h3>
+            <p>Clean, timeless & minimal family studio photoshoot.</p>
+            <button onclick="openModal('mid')">View Details</button>
+        </div>
+
+        <div class="package-card">
+            <h3>Self Photoshoot</h3>
+            <p>Walk-in self photoshoot experience.</p>
+            <button onclick="openModal('self')">View Details</button>
+        </div>
+
+        <div class="package-card">
+            <h3>Campaign Photoshoot</h3>
+            <p>Professional visuals for branding & marketing.</p>
+            <button class="disabled">Coming Soon</button>
+        </div>
+    </section>
+
+    <!-- BOHEMIAN (ORIGINAL – SAME AS BEFORE) -->
+    <div class="package-modal" id="boho">
+        <div class="package-modal-box">
+            <div class="close" onclick="closeModal('boho')">✕</div>
+            <h2>Bohemian Natural</h2>
+
+            <div class="inner-packages">
+                <div class="inner-card">
+                    <h4>Small Family</h4>
+                    <div class="details">
+                        <div class="detail"><i class="fa-solid fa-user-group"></i>1 – 6 Pax</div>
+                        <div class="detail"><i class="fa-solid fa-camera"></i>Unlimited Shoot (Enhance Photos)</div>
+                        <div class="detail"><i class="fa-solid fa-image"></i>All Softcopy (Same Day)</div>
+                        <div class="detail">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Max +1 pax only (RM10 / person). Space limited.
+                        </div>
+                    </div>
+                    <div class="price">RM 150</div>
+                    <button class="book" onclick="requireLogin()">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SELF (PRICE SEBELAH-SEBELAH) -->
+    <div class="package-modal" id="self">
+        <div class="package-modal-box">
+            <div class="close" onclick="closeModal('self')">✕</div>
+            <h2>Self Photoshoot Package</h2>
+
+            <div class="inner-packages">
+                <div class="inner-card">
+                    <div class="details">
+                        <div class="detail-row"><strong>Self Photoshoot (2 Pax)</strong><strong>RM 30</strong></div>
+                        <div class="detail">• 15 Minutes Photo Session</div>
+                        <div class="detail">• 2 Printed Photos</div>
+
+                        <br>
+
+                        <div class="detail-row"><strong>Additional Pax</strong><strong>RM 10</strong></div>
+                        <div class="detail">• Include 1 Printed Photo</div>
+
+                        <br>
+
+                        <div class="detail-row"><strong>Original Softcopy</strong><strong>RM 30</strong></div>
+                        <div class="detail">• Google Drive link via email</div>
+
+                        <br>
+
+                        <div class="detail-row"><strong>Extra Hardcopy</strong><strong>RM 5</strong></div>
+                    </div>
+
+                    <button class="book" onclick="requireLogin()">Book Now</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MID CENTURY (ORIGINAL – SAME AS BEFORE) -->
+    <div class="package-modal" id="mid">
+        <div class="package-modal-box">
+            <div class="close" onclick="closeModal('mid')">✕</div>
+            <h2>Mid-Century Modern</h2>
+
+            <div class="inner-packages">
+                <div class="inner-card">
+                    <h4>Medium Family</h4>
+                    <div class="details">
+                        <div class="detail"><i class="fa-solid fa-user-group"></i>7 – 14 Pax</div>
+                        <div class="detail"><i class="fa-solid fa-clock"></i>15 Minutes</div>
+                        <div class="detail"><i class="fa-solid fa-image"></i>All Softcopy (Same Day)</div>
+                        <div class="detail">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Max +2 pax only (RM10 / person). Space limited.
+                        </div>
+                    </div>
+                    <div class="price">RM 300</div>
+                    <button class="book" onclick="requireLogin()">Book Now</button>
+                </div>
+
+                <div class="inner-card">
+                    <h4>Large Family</h4>
+                    <div class="details">
+                        <div class="detail"><i class="fa-solid fa-user-group"></i>15 – 21 Pax</div>
+                        <div class="detail"><i class="fa-solid fa-clock"></i>30 Minutes</div>
+                        <div class="detail"><i class="fa-solid fa-image"></i>All Softcopy (Same Day)</div>
+                        <div class="detail">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Max +2 pax only (RM10 / person). Space limited.
+                        </div>
+                    </div>
+                    <div class="price">RM 500</div>
+                    <button class="book" onclick="requireLogin()">Book Now</button>
+                </div>
+
+                <div class="inner-card">
+                    <h4>Bigger Family</h4>
+                    <div class="details">
+                        <div class="detail"><i class="fa-solid fa-user-group"></i>22 – 27 Pax</div>
+                        <div class="detail"><i class="fa-solid fa-clock"></i>30 Minutes</div>
+                        <div class="detail"><i class="fa-solid fa-image"></i>All Softcopy (Same Day)</div>
+                        <div class="detail">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Max +2 pax only (RM10 / person). Space limited.
+                        </div>
+                    </div>
+                    <div class="price">RM 600</div>
+                    <button class="book" onclick="requireLogin()">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 De Amora Photography Studio · contact@deamora.com
+    </footer>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+        }
+
+        /* TAMBAHAN */
+        function requireLogin() {
+            alert("Please login or sign up first to continue booking.");
+        }
+    </script>
+
+
+</body>
+
+</html>
