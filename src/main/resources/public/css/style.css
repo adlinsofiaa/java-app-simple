@@ -1,0 +1,272 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #a29bfe;
+    /* Used this name consistently below */
+    --bg: #f4f7f6;
+    --white: #ffffff;
+    --shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding-top: 50px;
+    /* Add some space at the top */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Change from center to flex-start */
+    min-height: 100vh;
+}
+
+/* --- FORM LAYOUT FIXES --- */
+.main-wrapper {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+
+    box-sizing: border-box;
+    /* Critical for padding */
+    text-align: center;
+}
+
+.login-form{
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid red;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* --- PACKAGE CARDS (Your existing code) --- */
+.package-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    width: 90%;
+    padding: 40px 0;
+}
+
+.package-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.package-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.package-info {
+    padding: 25px;
+    text-align: center;
+}
+
+/* --- BUTTONS --- */
+.btn-booking {
+    display: block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+    border: none;
+    width: 100%;
+    /* Full width inside forms */
+    cursor: pointer;
+}
+
+.btn-booking:hover {
+    background-color: var(--accent);
+}
+
+/* --- PROGRESS BAR FIX --- */
+.progress-container {
+    width: 100%;
+    max-width: 400px;
+    /* Slimmer look for forms */
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.progress-step {
+    width: 35px;
+    height: 35px;
+    background: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1;
+    color: #777;
+}
+
+.progress-step.active {
+    background: var(--accent);
+    /* Fixed: matches :root variable */
+    color: white;
+}
+
+.progress-line {
+    position: absolute;
+    top: 17px;
+    left: 0;
+    height: 2px;
+    background: #ddd;
+    width: 100%;
+    z-index: 0;
+}
+
+/* General Page Styling */
+.register-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    /* Light grey matching your site background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    /* Matching the rounded corners in your image */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    width: 100%;
+    max-width: 450px;
+}
+
+h1 {
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+/* Form Inputs */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 0.85rem;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    /* Subtle rounding */
+    box-sizing: border-box;
+    background: #fdfdfd;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #333;
+    outline: none;
+    background: #fff;
+}
+
+/* Buttons */
+.signupbtn {
+    background-color: #1a1a1a;
+    /* Dark theme to match your logo text */
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.signupbtn:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: transparent;
+    color: #666;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

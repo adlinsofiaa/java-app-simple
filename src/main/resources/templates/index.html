@@ -1,61 +1,116 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'index')}">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>De Amora Photography Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/global.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
 <body>
 
-<div class="jumbotron text-center">
-    <div class="container">
-        <a href="/" class="lang-logo">
-            <img alt="" src="/lang-logo.png">
-        </a>
-        <h1>Getting Started with Java on Heroku</h1>
-        <p>This is a sample Java application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-        <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-java"><span class="glyphicon glyphicon-flash"></span> Getting Started on Heroku with Java</a>
-        <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-java-maven-fir"><span class="glyphicon glyphicon-flash"></span> Getting Started on Heroku Fir with Java</a>
-        <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/java-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-    </div>
-</div>
-<div class="container">
-    <div class="lead">
-        To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to either of the following tutorials:
-        <ul>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java" class="alert-link">Getting Started on Heroku with Java</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java-maven-fir" class="alert-link">Getting Started on Heroku Fir with Java</a></li>
-        </ul>
-    </div>
-    <hr />
-    <div class="row">
-        <div class="col-md-6">
-            <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-            <ul>
-                <li>This app was deployed to Heroku using Git.</li>
-                <li>When Heroku received the source code, it fetched all the dependencies in <a href="https://github.com/heroku/java-getting-started/blob/main/pom.xml">pom.xml</a>, creating a deployable build artifact.</li>
-                <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the build artifact can be mounted and executed.</li>
-                <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-            </ul>
+    <!-- NAV -->
+    <nav>
+        <strong>De Amora</strong>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="view/homepagePackage.html">Packages</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Login</button>
+                <div class="dropdown-content">
+                    <a href="view/customer/customerLogin.html">Customer</a>
+                    <a href="view/admin/adminLogin.html">Admin</a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-            <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
-            <ul>
-                <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-java">Getting Started on Heroku with Java</a> or <a href="https://devcenter.heroku.com/articles/getting-started-with-java-maven-fir">Getting Started on Heroku Fir with Java</a> guide, then please head back to the tutorial and follow the next steps!</li>
-            </ul>
-            <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-            <ul>
-                <li><a href="https://www.heroku.com/home">Heroku</a></li>
-                <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-                <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java">Getting Started on Heroku with Java</a></li>
-                <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java-maven-fir">Getting Started on Heroku Fir with Java</a></li>
-                <li><a href="https://devcenter.heroku.com/articles/deploying-java">Deploying Java Apps on Heroku</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="row" style="margin-top:1em">
-        <div class="col-md-12">
-            <p class="alert alert-info" role="alert">
-                Please do work through the Getting Started guide, even if you do know how to build such an application. The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <h1>De Amora Photography Studio</h1>
+
+            <p>
+                Professional photography & videography studio with over 10 years of
+                experience. We provide studio and outdoor sessions with a modern,
+                creative and elegant touch.
             </p>
         </div>
-    </div>
-</div>
+
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?fit=crop&w=900&q=80" alt="Studio">
+    </section>
+
+    <!-- INFO -->
+    <section class="info">
+
+        <!-- LEFT -->
+        <div class="left-stack">
+
+            <div class="card">
+                <h3>About Us</h3>
+
+                <p>
+                    Product & campaign photoshoots, self-photo sessions, family portraits,
+                    convocation photography, photobooth events, podcast recording,
+                    corporate and season photoshoots.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Contact</h3>
+
+                <p>
+                    📍 No 69-1 Jalan MP1,<br>
+                    Taman Merdeka Permai,<br>
+                    Batu Berendam, 75350 Melaka<br><br>
+
+                    📞 +6017 786 4358<br>
+                    ✉️ contact@deamora.com
+                </p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="card">
+
+            <h3>Operating Hours</h3>
+
+            <div style="margin-top: 10px;display: grid; row-gap: 10px;">
+
+                <div class="today">
+                    ● Open today: 9:00 AM – 6:00 PM
+                </div>
+
+                <div><strong>Monday</strong><span> 9:00 AM – 6:00 PM</span></div>
+                <div><strong>Tuesday</strong><span> 9:00 AM – 6:00 PM</span></div>
+                <div><strong>Wednesday</strong><span> 9:00 AM – 6:00 PM</span></div>
+                <div><strong>Thursday</strong><span> 9:00 AM – 6:00 PM</span></div>
+                <div><strong>Friday</strong><span> 9:00 AM – 6:00 PM</span></div>
+                <div><strong>Saturday</strong><span> 9:00 AM – 6:00 PM</span></div>
+                <div><strong>Sunday</strong><span> 9:00 AM – 6:00 PM</span></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MAP -->
+    <section class="map">
+
+        <iframe
+            src="https://www.google.com/maps?q=No%2069-1%20Jalan%20MP1%20Taman%20Merdeka%20Permai%20Melaka&output=embed"
+            loading="lazy">
+        </iframe>
+
+    </section>
 
 </body>
+
 </html>
