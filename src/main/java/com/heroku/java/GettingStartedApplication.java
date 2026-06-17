@@ -45,6 +45,12 @@ public class GettingStartedApplication {
         }
     }
 
+    @GetMapping("/homepagePackage")
+        public String packagePage() {
+        return "view/homepagePackage";
+    }
+
+
     public static void main(String[] args) {
         SpringApplication.run(GettingStartedApplication.class, args);
     }
